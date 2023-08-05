@@ -18,4 +18,4 @@ export default function FriendList({ friends }) {
       </FriendsList>
     </Wrapper>
   );
-}
+      }
