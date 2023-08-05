@@ -1,16 +1,18 @@
+import {Table, TableHead, TransactionRow, HeadTitles, TableBody,} from './Transactions.styled';
+
 import {Transaction} from "./Tramsaction"
 export default function TransactionHistory ({items}) {
     return (
-        <table className="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+        <Table>
+  <TableHead>
+    <TransactionRow>
+      <HeadTitles>Amount</HeadTitles>
+      <HeadTitles>Currency</HeadTitles>
+      <HeadTitles>Type</HeadTitles>
+      </TransactionRow>
+  </TableHead>
 
-  <tbody>
+  <TableBody>
     {items.map(({id, type, amount, currency}) =>{
       return ( 
       <Transaction
@@ -23,6 +25,6 @@ export default function TransactionHistory ({items}) {
     }) 
    
 }
-  </tbody>
-</table>
+  </TableBody>
+</Table>
 )}
