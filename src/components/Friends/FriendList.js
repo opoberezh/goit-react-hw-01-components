@@ -1,40 +1,21 @@
-import { FriendListItem } from "./FriendListItem"
+import { Wrapper, FriendsList } from './FriendList.styled';
+import { FriendListItem } from './FriendListItem';
 
-export default function FriendList ({friends}) {
+export default function FriendList({ friends }) {
   return (
-     <ul className="friend-list">
-            {friends.map(({id, avatar, name, isOnline, }) => {
-                return (
-                        <FriendListItem
-                        key={id}
-                        avatar={avatar}
-                        name={name}
-                        isOnline={isOnline}
-                     />
-                )
-            
-                }
-         
-            )}
-        </ul>
-  )
-       
+    <Wrapper>
+      <FriendsList>
+        {friends.map(({ id, avatar, name, isOnline }) => {
+          return (
+            <FriendListItem
+              key={id}
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+            />
+          );
+        })}
+      </FriendsList>
+    </Wrapper>
+  );
 }
-
-
-// export const FriendList = ({ friends }) => {
-//     return (
-//       <Wrapper>
-//         <FriendsList>
-//           {friends.map(({ id, avatar, name, isOnline }) => (
-//             <FriendListItem
-//               key={id}
-//               avatar={avatar}
-//               name={name}
-//               isOnline={isOnline}
-//             />
-//           ))}
-//         </FriendsList>
-//       </Wrapper>
-//     );
-//   };

@@ -1,9 +1,11 @@
+import {TransactionRow, TransactionType,  TableCells} from './Transactions.styled';
+
 export const Transaction = (({type, amount, currency}) => {
     return (
-        <tr>
-         <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-        </tr>
+        <TransactionRow>
+         <TransactionType>{type}</TransactionType>
+      <TableCells>{amount}</TableCells>
+      <TableCells>{currency}</TableCells>
+        </TransactionRow>
     )
 })
