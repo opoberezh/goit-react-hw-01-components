@@ -25,7 +25,7 @@ export const Item = styled.li`
 export const OnlineStatus = styled.span`
   width: 20px;
   height: 20px;
-  background-color: ${props => (props.isOnline ? 'green' : 'red')};
+  background-color: ${props => (props.isonline ? 'green' : 'red')};
   border-radius: 50%;
 `;
 
